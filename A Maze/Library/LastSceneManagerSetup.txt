@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Medieval_Cartoon_Village/Spooky_village/DemoScene/Hogsmeade_Maze.unity
+  isLoaded: 1
+  isActive: 1

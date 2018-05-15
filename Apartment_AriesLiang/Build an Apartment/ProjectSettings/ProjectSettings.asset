@@ -11,7 +11,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Udacity
+  companyName: Aries Liang
   productName: Build an Apartment
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -151,7 +151,7 @@ PlayerSettings:
     Android: com.Udacity.BuildAnApartment
     Standalone: com.Udacity.BuildAnApartment
     Tizen: com.MattSonic.Course2Project
-    iOS: com.Udacity.BuildAnApartment
+    iOS: com.AriesLiang.Course2Project
     tvOS: com.MattSonic.Course2Project
   buildNumber:
     iOS: 0
