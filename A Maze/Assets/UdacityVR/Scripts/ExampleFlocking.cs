@@ -53,7 +53,7 @@ public class ExampleFlocking : MonoBehaviour
 			_flock[i].transform.localRotation 	= Random.rotation;
 			_flock[i].transform.parent			= gameObject.transform;
 			_flock[i].name						= "Flock " + i;
-			_flock[i].GetComponent<Renderer> ().material.color = Color.yellow * Random.value;
+			_flock[i].GetComponent<Renderer> ().material.color = _default_color;
 			Destroy(_flock[i].GetComponent<BoxCollider>());
 		}
 
