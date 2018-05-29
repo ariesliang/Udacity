@@ -56,7 +56,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 9
     m_Resolution: 2
-    m_BakeResolution: 40
+    m_BakeResolution: 80
     m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AO: 0
@@ -66,7 +66,7 @@ LightmapSettings:
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 1
+    m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
@@ -10436,14 +10436,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: New Path 1
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathName: s_shape_1
+  pathColor: {r: 0.011624128, g: 0.03676468, b: 0.01491841, a: 1}
   nodes:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  nodeCount: 2
+  - {x: -4.84, y: 2.346574, z: -5.099189}
+  - {x: -4.84, y: 2.5116339, z: -4.8621154}
+  - {x: -4.84, y: 2.1945758, z: -4.666957}
+  - {x: -4.84, y: 1.9244512, z: -4.8410378}
+  - {x: -4.84, y: 1.7873431, z: -5.0876813}
+  - {x: -4.84, y: 1.530091, z: -5.1474595}
+  - {x: -4.84, y: 1.2731498, z: -4.9382343}
+  - {x: -4.84, y: 1.6209639, z: -4.663795}
+  nodeCount: 8
   initialized: 1
-  initialName: New Path 1
+  initialName: New Path 3
   pathVisible: 1
 --- !u!114 &951170002
 MonoBehaviour:
@@ -10456,14 +10462,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: New Path 3
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathName: s_shape_2
+  pathColor: {r: 0.0045415196, g: 0.04411763, b: 0.04411763, a: 1}
   nodes:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  nodeCount: 2
+  - {x: -4.84, y: 2.411475, z: -7.0561457}
+  - {x: -4.84, y: 2.4709604, z: -6.8627934}
+  - {x: -4.84, y: 2.247205, z: -6.6723003}
+  - {x: -4.84, y: 1.9215811, z: -6.8625517}
+  - {x: -4.84, y: 1.6510623, z: -7.176782}
+  - {x: -4.84, y: 1.2643842, z: -6.9488297}
+  - {x: -4.84, y: 1.6116761, z: -6.690676}
+  nodeCount: 7
   initialized: 1
-  initialName: New Path 3
+  initialName: New Path 2
   pathVisible: 1
 --- !u!114 &951170003
 MonoBehaviour:
@@ -10476,14 +10487,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: New Path 2
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathName: o_shape
+  pathColor: {r: 0.0022707637, g: 0.1544118, b: 0.1544118, a: 1}
   nodes:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  nodeCount: 2
+  - {x: -4.84, y: 2.5573847, z: -5.9093294}
+  - {x: -4.84, y: 2.1551628, z: -6.176608}
+  - {x: -4.84, y: 1.6655831, z: -6.183975}
+  - {x: -4.84, y: 1.2546115, z: -5.9135337}
+  - {x: -4.84, y: 1.6620215, z: -5.619379}
+  - {x: -4.84, y: 2.1808891, z: -5.6281404}
+  - {x: -4.84, y: 2.4652863, z: -5.7975087}
+  nodeCount: 7
   initialized: 1
-  initialName: New Path 2
+  initialName: New Path 1
   pathVisible: 1
 --- !u!114 &951170004
 MonoBehaviour:
@@ -13838,11 +13854,6 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2b21dd9fbf91af74fb7207066f86e571, type: 2}
-    - target: {fileID: 82815450824121882, guid: 2071096f611e2b24795f06afe118ac15,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 114772316342895660, guid: 2071096f611e2b24795f06afe118ac15, type: 2}
@@ -14065,7 +14076,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604098711}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 19.09, y: 2.3, z: 0.04}
+  m_LocalPosition: {x: 18.4, y: 2.3, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 924395351}
