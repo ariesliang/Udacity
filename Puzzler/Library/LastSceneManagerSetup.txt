@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/PuzzlerVR/Scenes/outpost on desert.unity
-  isLoaded: 1
-  isActive: 1
