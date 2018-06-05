@@ -321,6 +321,8 @@
     <None Include="Assets\Plugins\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\Plugins\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
     <None Include="Assets\Plugins\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
+    <None Include="Assets\Plugins\race-track-lake\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+    <None Include="Assets\Plugins\race-track-lake\readmore.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

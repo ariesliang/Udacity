@@ -6,30 +6,30 @@ using System.Collections.Generic;
 public class CoasterControllerSWLXR : MonoBehaviour {
 
 	public bool info = true;
-	[HideInInspector] [Range(1,4)] public int trains = 1;
-	[HideInInspector] [Range(0.25f,2f)] public float animationSpeed = 0.5f;
+	[HideInInspector] [Range(1,4)] public int trains = 2;
+	[HideInInspector] [Range(0.25f,2f)] public float animationSpeed = 1.0f;
 	[Tooltip("Deactivated copy of a train. Used to instantiate all trains but the first one.")]
 	public GameObject[] trainPrefab;
-	[Tooltip("The train that is activated in editor. Use this train to add camera etc.")]
-	public GameObject[] firstTrain;
-    public GameObject breatheAudioHolder;
+    [Tooltip("The train that is activated in editor. Use this train to add camera etc.")]
+    public GameObject[] firstTrain;
 
-	List<Animation> cartAnimations;
-	List<int> trainIndices;
+    List<Animation> cartAnimations;
+    List<int> trainIndices;
 
-	public float[] startDelay = new float[]{0,48.5f,24.25f,17.25f};
+    public float[] startDelay = new float[] { 0, 48.5f, 24.25f, 17.25f };
 
-	// Use this for initialization
-	void Start () {
-		if (Check()) {
-		} else {
-			return;
-		}
-        AudioSource breathe = breatheAudioHolder.GetComponent<AudioSource>();
-        breathe.time = 56.5f;
-        breathe.Play();
-
-		cartAnimations = new List<Animation> ();
+    // Use this for initialization
+    void Start()
+    {
+        if (Check())
+        {
+        }
+        else
+        {
+            return;
+        }
+       
+        cartAnimations = new List<Animation> ();
 		trainIndices = new List<int> ();
 		for (int ct = 0; ct < trainPrefab.Length; ct++) {
 			Animation anim = trainPrefab[ct].GetComponent<Animation>();

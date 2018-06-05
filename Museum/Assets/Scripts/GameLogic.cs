@@ -7,28 +7,55 @@ public class GameLogic : MonoBehaviour {
     public GameObject rollercoaster;
     public GameObject curves;
     public GameObject pillars;
-    public Material space;
+    public Material coasterVirtualWorldMaterial;
+    public Material coasterRealityWorldMaterial;
+    public GameObject realityWorld;
+    public GameObject virtualWorld;
+    public GameObject cardboardIndicator;
+    public GameObject breatheAudioHolder;
 
-	// Use this for initialization
-	void Start () {
-        //MakeInvisible(rollercoaster);
-        ChangeRollerCoasterMaterial(space, curves);
-        MakeInvisible(pillars);
+    private bool virt;
+    private AudioSource breathe;
+
+    void Start() {
+        virt = false;
+        breathe = breatheAudioHolder.GetComponent<AudioSource>();
+        breathe.time = 56.5f;
+        breathe.Play();
+        breathe.mute = true;
     }
 
-    void MakeInvisible (GameObject targetObject)
+    void Update()
     {
-        if (targetObject != null && !targetObject.CompareTag("Visible") && !targetObject.CompareTag("MainCamera")) {
-            if (targetObject.GetComponent<Renderer>() != null)
-            {
-                targetObject.GetComponent<Renderer>().enabled = false;
-            }
-            foreach (Transform child in targetObject.transform)
-            {
-                MakeInvisible(child.gameObject);
-            }
-        } 
+        // If the player pressed the cardboard button (or touched the screen), set the trigger parameter to active (until it has been used in a transition)
+        if (Input.GetMouseButtonDown(0))
+        {
+            SwitchReality();
+        }
     }
+
+    void SwitchReality() {
+        if (virt)
+        { // switching back to reality
+            virt = false;
+            realityWorld.SetActive(true);
+            virtualWorld.SetActive(false);
+            pillars.SetActive(true);
+            ChangeRollerCoasterMaterial(coasterRealityWorldMaterial, curves);
+            cardboardIndicator.SetActive(false);
+            breathe.mute = true;
+        }
+        else
+        { // switching back to virtual 
+            virt = true;
+            virtualWorld.SetActive(true);
+            realityWorld.SetActive(false);
+            pillars.SetActive(false);
+            ChangeRollerCoasterMaterial(coasterVirtualWorldMaterial, curves);
+            cardboardIndicator.SetActive(true);
+            breathe.mute = false;
+        }
+    } 
 
     void ChangeRollerCoasterMaterial(Material space, GameObject targetObject)
     {
@@ -46,7 +73,5 @@ public class GameLogic : MonoBehaviour {
                 ChangeRollerCoasterMaterial(space, child.gameObject);
             }
         }
-    }
-
-    
+    } 
 }
