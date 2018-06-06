@@ -345,6 +345,7 @@
     <Compile Include="Assets\Plugins\GoogleVR\Scripts\Utilities\GvrMathHelpers.cs" />
     <Compile Include="Assets\Plugins\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
     <Compile Include="Assets\Plugins\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\Plugins\iTween.cs" />
     <Compile Include="Assets\Plugins\laxer Assets\coaster\AnimationDelay.cs" />
     <Compile Include="Assets\Plugins\laxer Assets\coaster\AudioVelocityControl.cs" />
     <Compile Include="Assets\Plugins\laxer Assets\coaster\Other\CoasterControllerSWLXR UI.cs" />

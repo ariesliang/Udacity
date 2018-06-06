@@ -235,6 +235,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\DropOfDoomCartController.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Flocking.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />

@@ -4,60 +4,93 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour {
 
-    public GameObject rollercoaster;
-    public GameObject curves;
-    public GameObject pillars;
+    public bool coaster; // true if set coaster to major scene, false if set drop of doom as major scene
+
+    public GameObject coasterCurves;
+    public GameObject coasterpillars;
+    public GameObject dropOfDoom;
+    public GameObject park;
+
     public Material coasterVirtualWorldMaterial;
     public Material coasterRealityWorldMaterial;
-    public GameObject realityWorld;
-    public GameObject virtualWorld;
+
+    public GameObject coasterVirtualWorld;
+    public GameObject dropOfDoomVirtualWorld;
+
+    public GameObject cameraHolder;
     public GameObject cardboardIndicator;
+
+    public GameObject coasterCameraPositionHolder;
+    public GameObject dropOfDoomCameraPositionHolder;
+
     public GameObject breatheAudioHolder;
 
-    private bool virt;
+    private bool virtCoaster;
     private AudioSource breathe;
 
     void Start() {
-        virt = false;
-        breathe = breatheAudioHolder.GetComponent<AudioSource>();
-        breathe.time = 56.5f;
-        breathe.Play();
-        breathe.mute = true;
+        if (coaster)
+        {
+            virtCoaster = false;
+            cameraHolder.transform.parent = coasterCameraPositionHolder.transform;
+            cameraHolder.transform.localPosition = new Vector3(0f, 2f, 0f);
+            cameraHolder.transform.Rotate(0, 235, 0);
+            breathe = breatheAudioHolder.GetComponent<AudioSource>();
+            breathe.time = 56.5f;
+            breathe.Play();
+            breathe.mute = true; 
+        }
+        else
+        {
+            cameraHolder.transform.parent = dropOfDoomCameraPositionHolder.transform;
+            cameraHolder.transform.localPosition = new Vector3(0f, 0.8f, 0f);
+        }
     }
 
     void Update()
     {
-        // If the player pressed the cardboard button (or touched the screen), set the trigger parameter to active (until it has been used in a transition)
-        if (Input.GetMouseButtonDown(0))
+        /* If the player pressed the cardboard button (or touched the screen), 
+         * set the trigger parameter to active (until it has been used in a transition)
+         */ 
+        if (coaster && Input.GetMouseButtonDown(0))
         {
-            SwitchReality();
+            SwitchCoasterReality();
         }
     }
 
-    void SwitchReality() {
-        if (virt)
+    public void Log()
+    {
+        Debug.Log("touched");
+    }
+
+    void SwitchCoasterReality() {
+        if (virtCoaster)
         { // switching back to reality
-            virt = false;
-            realityWorld.SetActive(true);
-            virtualWorld.SetActive(false);
-            pillars.SetActive(true);
-            ChangeRollerCoasterMaterial(coasterRealityWorldMaterial, curves);
-            cardboardIndicator.SetActive(false);
+            park.SetActive(true);
+            coasterpillars.SetActive(true);
+            dropOfDoom.SetActive(true);
             breathe.mute = true;
+
+            coasterVirtualWorld.SetActive(false);
+            ChangeMaterial(coasterRealityWorldMaterial, coasterCurves);
+            cardboardIndicator.SetActive(false);
+            virtCoaster = false;
         }
         else
         { // switching back to virtual 
-            virt = true;
-            virtualWorld.SetActive(true);
-            realityWorld.SetActive(false);
-            pillars.SetActive(false);
-            ChangeRollerCoasterMaterial(coasterVirtualWorldMaterial, curves);
-            cardboardIndicator.SetActive(true);
+            park.SetActive(false);
+            coasterpillars.SetActive(false);
+            dropOfDoom.SetActive(false);
             breathe.mute = false;
+
+            coasterVirtualWorld.SetActive(true);
+            ChangeMaterial(coasterVirtualWorldMaterial, coasterCurves);
+            cardboardIndicator.SetActive(true);
+            virtCoaster = true;
         }
     } 
 
-    void ChangeRollerCoasterMaterial(Material space, GameObject targetObject)
+    void ChangeMaterial(Material space, GameObject targetObject)
     {
         if (targetObject != null)
         {
@@ -70,7 +103,7 @@ public class GameLogic : MonoBehaviour {
             }
             foreach (Transform child in targetObject.transform)
             {
-                ChangeRollerCoasterMaterial(space, child.gameObject);
+                ChangeMaterial(space, child.gameObject);
             }
         }
     } 
