@@ -321,6 +321,9 @@
     <None Include="Assets\Plugins\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\Plugins\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
     <None Include="Assets\Plugins\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
+    <None Include="Assets\Plugins\Polygonal One Eyed Bat\Read me.txt" />
+    <None Include="Assets\Plugins\Polygonal One Eyed Bat\www.meshtint.com.txt" />
+    <None Include="Assets\Plugins\SHOWROOM\Shaders\sh_showroom_tv_01.shader" />
     <None Include="Assets\Plugins\race-track-lake\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <None Include="Assets\Plugins\race-track-lake\readmore.txt" />
   </ItemGroup>

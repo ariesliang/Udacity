@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/rollercoaster_space.unity
+- path: Assets/Plugins/SHOWROOM/Scenes/Showroom_demo_02.unity
   isLoaded: 1
   isActive: 1

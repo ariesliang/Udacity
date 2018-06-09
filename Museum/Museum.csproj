@@ -235,10 +235,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BatController.cs" />
+    <Compile Include="Assets\MyTestAIController.cs" />
+    <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\Scripts\DropOfDoomCartController.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Flocking.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />
+    <Compile Include="Assets\Scripts\WaypointMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\GoogleVR\Demos\Environment\DemoEnvUnlitGrayscale.shader" />
@@ -257,6 +261,9 @@
     <None Include="Assets\Plugins\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\Plugins\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
     <None Include="Assets\Plugins\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
+    <None Include="Assets\Plugins\Polygonal One Eyed Bat\Read me.txt" />
+    <None Include="Assets\Plugins\Polygonal One Eyed Bat\www.meshtint.com.txt" />
+    <None Include="Assets\Plugins\SHOWROOM\Shaders\sh_showroom_tv_01.shader" />
     <None Include="Assets\Plugins\race-track-lake\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <None Include="Assets\Plugins\race-track-lake\readmore.txt" />
   </ItemGroup>
