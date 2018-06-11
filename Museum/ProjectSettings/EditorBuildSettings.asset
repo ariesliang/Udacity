@@ -4,4 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Showroom.unity
+    guid: 046c5f66645877d409fbfb6f2f1c0ed3
+  - enabled: 1
+    path: Assets/Scenes/rollercoaster.unity
+    guid: 156b9926300fe6649b2c1031cc9e081c
+  m_configObjects: {}

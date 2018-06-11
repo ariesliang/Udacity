@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour {
 
-    public bool coaster; // true if set coaster to major scene, false if set drop of doom as major scene
+    public static bool coaster = true; // true if set coaster to major scene, false if set drop of doom as major scene
 
     public GameObject coasterCurves;
     public GameObject coasterpillars;
@@ -14,8 +14,7 @@ public class GameLogic : MonoBehaviour {
     public Material coasterVirtualWorldMaterial;
     public Material coasterRealityWorldMaterial;
 
-    public GameObject coasterVirtualWorld;
-    public GameObject dropOfDoomVirtualWorld;
+    public GameObject coasterVirtualWorld; 
 
     public GameObject cameraHolder;
     public GameObject cardboardIndicator;
@@ -24,11 +23,12 @@ public class GameLogic : MonoBehaviour {
     public GameObject dropOfDoomCameraPositionHolder;
 
     public GameObject breatheAudioHolder;
+    public GameObject endPoint;
 
     private bool virtCoaster;
     private AudioSource breathe;
 
-    void Start() {
+    void Start() { 
         if (coaster)
         {
             virtCoaster = false;
@@ -55,12 +55,7 @@ public class GameLogic : MonoBehaviour {
         if (coaster && Input.GetMouseButtonDown(0))
         {
             SwitchCoasterReality();
-        }
-    }
-
-    public void Log()
-    {
-        Debug.Log("touched");
+        } 
     }
 
     void SwitchCoasterReality() {

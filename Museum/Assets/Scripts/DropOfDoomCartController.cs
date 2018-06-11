@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DropOfDoomCartController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject cameraHolder;
+    public GameObject dropOfDoomCameraPositionHolder;
+
+    // Use this for initialization
+    void Start () {
         MoveUp();
     }
 	
@@ -25,7 +29,17 @@ public class DropOfDoomCartController : MonoBehaviour {
                                             "time", 3f,
                                             "loopType", "none",
                                             "easeType", iTween.EaseType.easeInOutSine,
-                                            "oncomplete", "MoveUp"
+                                            "oncomplete", "ChangeScene"
                                             ));
+    }
+
+    void ChangeScene()
+    {
+        if (!GameLogic.coaster)
+        { 
+            Debug.Log("Entered");
+            GameLogicMuseum.playerPosition = new Vector3(8, 2.1f, 9);
+            SceneManager.LoadSceneAsync("Showroom");
+        }
     }
 }

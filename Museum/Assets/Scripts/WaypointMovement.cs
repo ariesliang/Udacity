@@ -5,7 +5,6 @@ public class WaypointMovement : MonoBehaviour {
 	
 	public GameObject player;
 
-
     public float height = 2f;
 	public bool teleport = false;
 
@@ -22,7 +21,15 @@ public class WaypointMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float scale = Mathf.Lerp(0.5f, 1f, Mathf.Abs(Mathf.Cos(Time.time)));
-        transform.localScale = Vector3.one * scale; 
+        transform.localScale = Vector3.one * scale;
+        /*
+        if (player.transform.position.x == gameObject.transform.position.x && player.transform.position.z == gameObject.transform.position.z)
+        {
+            gameObject.SetActive(false);
+        } else
+        {
+            gameObject.SetActive(true);
+        }*/
     }
 
 	public void Move(GameObject waypoint) {
