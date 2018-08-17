@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1115299305501110}
+  m_IsPrefabParent: 1
+--- !u!1 &1115299305501110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4133558018657956}
+  - component: {fileID: 114647076912374558}
+  m_Layer: 0
+  m_Name: _GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4133558018657956
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1115299305501110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114647076912374558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1115299305501110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81a0eaa57d90724eb454ac6615afc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  smallObjectPrefabs:
+  - {fileID: 114235406253508644, guid: 62684dd61979ede4bb6f358b8db1a92c, type: 2}
+  - {fileID: 114650115090960106, guid: f546d949dc6fba74fbf8ff7bd13cd362, type: 2}
+  - {fileID: 114214164081471770, guid: 0476fe08cbb95b74698b655791efb37b, type: 2}
+  - {fileID: 114326035598223812, guid: b9c17d18ed088354893bb87d373c20ed, type: 2}
+  largeObjectPrefabs:
+  - {fileID: 114791304477699488, guid: 9d155a57e8c3f3a498a993183a2b011c, type: 2}
+  - {fileID: 114811023621923256, guid: 6f2da32faed731e418ffeffd517259bf, type: 2}
+  - {fileID: 114484579710530204, guid: 2ffe9b0665feb314e92ae01af4558c1c, type: 2}
+  - {fileID: 114107430948890658, guid: d2ddac04635f2354f992690f86c0fbc6, type: 2}
+  animations:
+  - {fileID: 0}
+  - {fileID: 0}
+  parentPrefab: {fileID: 114835897626853800, guid: fe7fbe6295191ad479127183578324b9,
+    type: 2}
+  spawnColumnOffset: {x: 1, y: 0, z: 0}
+  largeObjectZoffset: {x: 0, y: 0, z: -2.5}
+  level: {fileID: 0}
+  easyFire: {fileID: 0}
+  midFire: {fileID: 0}
+  hardFire: {fileID: 0}

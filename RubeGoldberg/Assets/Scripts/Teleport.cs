@@ -46,7 +46,7 @@ public class Teleport : MonoBehaviour {
 
             setLaserStart(gameObject.transform.position);
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 1, 0))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 1, 1))
             {
                 teleportLocation = hit.point;
             }
